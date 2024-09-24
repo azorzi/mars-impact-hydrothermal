@@ -1,0 +1,64 @@
+#ISINP
+------------------------------------------------------------------------
+--- this is the new input file used by iSALE versions of v7.0 and higher
+------------------------------------------------------------------------
+------------------- General Model Info ---------------------------------
+VERSION               __DO NOT MODIFY__             : 4.1
+DIMENSION             dimension of input file       : 2
+PATH                  Data file path                : ./
+MODEL                 Modelname                     : Planet2D
+- DUMP                  Dumpfile for restart          : restart.dump
+------------------- Mesh Geometry Parameters ---------------------------
+GRIDH                 horizontal cells              : 0           : 180         : 0
+GRIDV                 vertical cells                : 0           : 320         : 0
+GRIDSPC               grid spacing                  : 0.5D3
+CYL                   Cylind. geometry              : 1.0D0
+------------------- Global setup parameters -----------------------------
+S_TYPE                setup type                    : PLANET
+T_SURF                Surface temp                  : 160.D0
+DTDZSURF              Surface temp. gradient (K/m)  : 5.E-3
+R_PLANET              Radius of planet (m)          : 3.389D6
+D_LITH                Lithospheric thickness (m)    : 50.D3
+GRAD_TYPE             gradient type                 : CENTRAL
+GRAD_DIM              gradient dimension            : 3
+COL_SITE              Location of collision         : 250
+------------------- Projectile ("Object") Parameters --------------------
+OBJNUM                number of objects             : 2
+OBJRESH               CPPR horizontal               : 20          : 6780        
+OBJVEL                object velocity               : -0.7D4      : 0.D0       
+OBJMAT                object material               : mars_cr     : mars_cr    
+OBJTYPE               object type                   : SPHEROID    : SPHEROID   
+OBJTPROF              proj thermal prof             : CONST       : CONDCONVCAP
+------------------- Target Parameters ----------------------------------
+LAYNUM                layers number                 : 0
+------------------- Time Parameters ------------------------------------
+DT                    initial time increment        : 5.0D-3
+DTMAX                 maximum timestep              : 5.D-1
+TEND                  end time                      : 900.0D0
+DTSAVE                save interval                 : 10.D0
+------------------- Ac. Fluid. Parameters (see also material.inp) ------
+TOFF                  toff                          : 16.D0
+CVIB                  c_vib                         : 0.1D0
+VIB_MAX               Max. vib.vel.                 : 200.
+------------------- Boundary Condition Parameters ----------------------
+--------------- 0=no slip,1=free slip, 2=cont.outflow ------------------
+BND_L                 left                          : FREESLIP
+BND_R                 right                         : FREESLIP
+BND_B                 bottom                        : NOSLIP
+BND_T                 top                           : OUTFLOW
+------------------- Numerical Stability Parameters ---------------------
+AVIS                  art. visc. linear             : 0.24D0
+AVIS2                 art. visc. quad.              : 1.20D0
+ROCUTOFF              density cutoff                : 80.0D1
+------------------- Tracer Particle Parameters -------------------------
+TR_QUAL               integration qual.             : 1
+TR_SPCH               tracer spacing X              : -2.D0       : -2.D0       : -2.D0
+TR_SPCV               tracer spacing Y              : -2.D0       : -2.D0       : -2.D0
+TR_VAR                add. tracer fiels             : #TrP-TrT#
+------------------- (Material) Model parameters (global) ---------------
+STRESS                Consider stress               : 1
+------------------- Data Saving Parameters -----------------------------
+QUALITY               Compression rate              : -50
+VARLIST               List of variables             : #Den-Tmp-Pre-Sie-Yld-YAc-Dam-VEL-Alp#
+------------------------------------------------------------------------
+<<END

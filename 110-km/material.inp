@@ -1,0 +1,50 @@
+#ISMAT ! iSale material input file identification string
+--------------------------------------------------------------------------------
+MATNAME     Material name                 : mars_cr     : H2O_ice      : mars_nc     
+EOSNAME     EOS name                      : basalt_     : h2o_ice      : ice____     
+EOSTYPE     EOS type                      : aneos       : aneos        : tillo       
+STRMOD      Strength model                : ROCK        : ICE          : ICE         
+DAMMOD      Damage model                  : COLLINS     : IVANOV       : COLLINS     
+ACFL        Acoustic fluidisation         : NONE        : BLOCK        : NONE        
+PORMOD      Porosity model                : NONE        : NONE         : NONE        
+THSOFT      Thermal softening             : OHNAKA      : OHNAKA       : OHNAKA      
+LDWEAK      Low density weakening         : POLY        : POLY         : POLY        
+------------------------------------------------------------------------------
+ANETABLE    ANEOS Table mode              : READ        : READ         : xxxxxxxxxx
+ANEVARS     ANEOS Table variables         : TmpDen      : SieDen       : xxxxxxxxxx
+ANENT       No. of thermal nodes          :  60         : 200          : xxxxxxxxxx
+ANEND       No. of density nodes          : 120         : 270          : xxxxxxxxxx
+---------general parameters --------------------------------------------------------
+POIS        pois                          : 2.5D-01     : 3.3D-01      : 3.0D-01     
+---------thermal softening ---------------------------------------------------------
+TFRAC       tfrac                         : 0.7D+00     : 1.2D+00      : 1.2D+00     
+---------thermal parameters --------------------------------------------------------
+TMELT0      tmelt0                        : 1.36D+03    : 2.7315D+02   : 2.7315D+02   
+ASIMON      a_simon                       : 4.5D+09     : 6.D+09       : 6.D+09      
+CSIMON      c_simon                       : 3.D+00      : 3.D+00       : 3.D+00      
+---------shear strength of intact material -----------------------------------------
+YINT0       yint0                         : 2.D+07      : 1.0000D+07   : 5.D+04      
+FRICINT     fricint                       : 1.4D+00     : 2.0000D+00   : 2.D+00      
+YLIMINT     ylimint                       : 3.5D+09     : 1.1000D+08   : 1.1D+08     
+---------shear strength of damaged material ----------------------------------------
+YDAM0       ydam0 (ycoh)                  : 2.D+05      : 5.0000D+05   : 1.D+04      
+FRICDAM     fricdam                       : 8.4D-01     : 6.0000D-01   : 1.8D-01     
+YLIMDAM     ylimdam                       : 3.5D+09     : 1.1000D+08   : 1.1D+08     
+---------shear damage (Collins) ----------------------------------------------------
+BDTPRES     bdt_pres                      : -1.D+00     : xxxxxxxxxx   : -1.D+00     
+BPTPRES     bpt_pres                      : -1.D+00     : xxxxxxxxxx   : -1.D+00     
+----------------------------------------------------------------------------------
+IVANOV_A    Damage parameter              : xxxxxxxxxx  : 1.0000D-04   : xxxxxxxxxx  
+IVANOV_B    Damage parameter              : xxxxxxxxxx  : 1.0000D-11   : xxxxxxxxxx  
+IVANOV_C    Damage parameter              : xxxxxxxxxx  : 3.0000D+08   : xxxxxxxxxx  
+---------porosity properties (Wuennemann) ------------------------------------------
+ALPHA0      Initial porosity              : 1.11D+00    : 1.53846D+00  : 1.00D+00    
+EPSE0       Elastic threshold             : -1.D-03     : -1.D-03      : -1.D-03     
+ALPHAX      Transition                    : 1.1D+00     : 2.61D+00     : 1.1D+00     
+KAPPA       Exp Coefficient               : 9.8D-01     : 9.9D-01      : 9.8D-01     
+CHI         Sound speed ratio             : 1.D+00      : 0.5D+00      : 1.D+00    
+----------------------------------------------------------------
+GAMETA      gam_eta                       : xxxxxxxxxx  : 6.9200D-02   : xxxxxxxxxx
+GAMBETA     gam_beta                      : xxxxxxxxxx  : 1.1000D+03   : xxxxxxxxxx  
+--------------------------------------------------------------------------------
+<<END ! used to identify the end of this file
